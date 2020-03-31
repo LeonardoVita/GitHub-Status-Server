@@ -1,24 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import cheerio from 'cheerio'
+
+import './global.css'
 
 function App() {
+
+  const [statusArray, setStatusArray] = useState([{ name: '', status: '' }]);
+  let load = 0
+  async function getData() {
+    const res = await axios.get('https://www.githubstatus.com/')
+    const $ = cheerio.load(res.data)
+
+    $(".component-container").each((i, element) => {
+
+      const name = $(element)
+        .find("span.name")
+        .text()
+        .trim()
+      const status = $(element)
+        .find("span.component-status")
+        .text()
+        .trim()
+
+      setStatusArray(...statusArray, { name, status })
+    })
+    load++
+  }
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h1>Status do gitHub server</h1>
     </div>
   );
 }
