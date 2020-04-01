@@ -116,10 +116,6 @@ display: none;
   .status-container.reload-mobile {
     background-color: teal;
     
-  }  
-  
-  .disclaimer p{
-    /* display: none; */
-  }
+  } 
 
 }

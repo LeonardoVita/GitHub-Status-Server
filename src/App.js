@@ -63,9 +63,9 @@ function App() {
       </ul>
       <div className="disclaimer">
         <p>Este um app não oficial, para mais informações oficias utiliza o link da pagina oficial do
-          <a href="https://www.githubstatus.com" target="_blank"> githubstatus.com</a></p>
-        <p>Este é um Projeto feito por Leonardo vita, visite o meu Repositorio no github 🚀
-        <a href="https://github.com/LeonardoVita" target="_blank"> Meu Repositorio</a></p>
+          <a href="https://www.githubstatus.com" target="_blank" rel="noopener noreferrer"> githubstatus.com</a></p>
+        <p>Este é um Projeto feito por Leonardo vita, visite o meu Repositorio no github <span role="img" arial-label="foguete">🚀</span>
+          <a href="https://github.com/LeonardoVita" target="_blank" rel="noopener noreferrer"> Meu Repositorio</a></p>
       </div>
     </div>
   );
