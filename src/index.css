@@ -11,6 +11,7 @@
 
 .wrap h1 {  
   margin: 50px 0;
+  font-size: 48px;
 }
 
 .status-container{
@@ -70,6 +71,7 @@
 
 .disclaimer p{
   margin-bottom: 10px;
+  font-size: 18px;
 }
 
 .reload-mobile{
@@ -80,6 +82,7 @@ display: none;
   .wrap h1 {
     padding: 0;
     margin: 20px 0;
+    font-size: 32px;
   }
 	.status-container{
     height: auto;
@@ -115,7 +118,11 @@ display: none;
   }
   .status-container.reload-mobile {
     background-color: teal;
-    
+    display: flex;    
   } 
+
+  .disclaimer p{
+    font-size: 10px;
+  }
 
 }
