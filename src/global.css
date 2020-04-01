@@ -14,10 +14,19 @@ body{
   color: #f7f7f7;
 }
 
+ul li {
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: royalblue;
+}
+
 /* Grid */
 
 
-/* *, *:before, *:after {
+*, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
   box-sizing: border-box;
@@ -127,4 +136,4 @@ body{
 		float: none;
 	}
 
-} */
+}
